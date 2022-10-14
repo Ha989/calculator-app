@@ -71,7 +71,7 @@ function allDelete() {
 }
 
 function updateCalculator () {
-    if(result === NaN) {
+    if(result === "NaN") {
         display.innerHTML = "Error";
     }
 }
