@@ -43,10 +43,10 @@ const calculate = () => {
     if(operator === "devide") {
         result = parseFloat(number1) / parseFloat(number2);
     }
+    updateCalculator ();
     display.innerHTML = result;
     number1 = result;
     number2 = "";
-    updateCalculator ();
 };
 
 allClearButton.addEventListener('click', allClear);
@@ -54,8 +54,8 @@ allDeleteButton.addEventListener('click', allDelete);
 
 // Clear button
 function allClear() {
-    number1= 0;
-    number2= 0;
+    number1= '';
+    number2 = '';
     operator = null;
     display.innerHTML = '';
     
