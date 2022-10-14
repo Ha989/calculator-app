@@ -43,11 +43,11 @@ const calculate = () => {
     if(operator === "devide") {
         result = parseFloat(number1) / parseFloat(number2);
     }
-    updateCalculator ();
-    display.innerHTML = result;
     number1 = result;
-    number2 = "";
+    number2 ='';
+    updateCalculator () ;
 };
+
 
 allClearButton.addEventListener('click', allClear);
 allDeleteButton.addEventListener('click', allDelete);
@@ -71,8 +71,11 @@ function allDelete() {
 }
 
 function updateCalculator () {
-    if(result === "NaN") {
-        display.innerHTML = "Error";
+    if(isNaN(result)) {
+        display.innerHTML = "Error"
+    } else {
+        display.innerHTML = result;
     }
 }
+
 // If it is not an operator so should return error
