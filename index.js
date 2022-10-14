@@ -46,18 +46,19 @@ const calculate = () => {
     display.innerHTML = result;
     number1 = result;
     number2 = "";
+    updateCalculator ();
 };
 
 allClearButton.addEventListener('click', allClear);
 allDeleteButton.addEventListener('click', allDelete);
+
 // Clear button
 function allClear() {
-
-    display.innerHTML = '';
     number1= 0;
     number2= 0;
-
-
+    operator = null;
+    display.innerHTML = '';
+    
 }
 
 // delete button
@@ -70,13 +71,8 @@ function allDelete() {
 }
 
 function updateCalculator () {
-    if (display.innerHTML.length === 0) {
-    addNumber();
-    setOperator();
-    }
-    if(display.innerHTML === NaN) {
+    if(result === NaN) {
         display.innerHTML = "Error";
     }
-
 }
 // If it is not an operator so should return error
