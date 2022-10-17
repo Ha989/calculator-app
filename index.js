@@ -74,7 +74,7 @@ function updateCalculator () {
     if(isNaN(result)) {
         display.innerHTML = "Error"
     } else {
-        display.innerHTML = result;
+        display.innerHTML = result.toFix(2);
     }
 }
 
